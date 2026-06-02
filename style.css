@@ -129,11 +129,12 @@ a {
     align-items: center;
     justify-content: center;
     padding: 16px 36px;
-    font-family: var(--font-heading);
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
+    word-spacing: 0.08em;
     cursor: pointer;
     transition: var(--transition-smooth);
     border-radius: var(--radius-md);
@@ -1305,6 +1306,7 @@ a {
     border-bottom: 1px solid var(--border-glass);
     position: relative;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 .reviews-layout {
@@ -2235,6 +2237,10 @@ footer p {
     }
     .reviews-slider-wrapper {
         padding: 0;
+        max-width: 100%;
+    }
+    .reviews-slider-track-container {
+        overflow: hidden;
     }
 
     /* Bonuses */
@@ -2244,6 +2250,12 @@ footer p {
     }
     .bonus-card {
         padding: 28px 24px;
+        overflow: visible;
+    }
+    .bonuses-section.reveal,
+    .bonuses-section.reveal.active {
+        opacity: 1;
+        transform: none;
     }
     
     /* Steps */
@@ -2259,6 +2271,20 @@ footer p {
     /* CTA */
     .cta-section h2 {
         font-size: 2.25rem;
+    }
+
+    /* Buttons scale down on mobile */
+    .btn {
+        padding: 14px 28px;
+        font-size: 0.9rem;
+    }
+    .btn-hero-cta {
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+    .btn-cta-pill {
+        padding: 14px 32px;
+        font-size: 0.9rem;
     }
 
     /* Sticky bar */
@@ -2339,6 +2365,18 @@ footer p {
     }
     .cta-section h2 {
         font-size: 1.85rem;
+    }
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+    }
+    .btn-hero-cta {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+    .btn-cta-pill {
+        padding: 12px 28px;
+        font-size: 0.85rem;
     }
     footer {
         padding: 50px 0 20px;
