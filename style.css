@@ -131,7 +131,6 @@ a {
     padding: 16px 36px;
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     word-spacing: 0.08em;
@@ -1904,7 +1903,7 @@ a {
 footer {
     background-color: #0A0A0C;
     color: var(--text-muted);
-    padding: 80px 0 30px;
+    padding: 80px 0 100px;
     text-align: center;
     font-size: 0.9rem;
     border-top: 1px solid rgba(255,255,255,0.02);
