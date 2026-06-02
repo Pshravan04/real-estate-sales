@@ -177,186 +177,220 @@
             <h2 class="section-title text-center">What's Inside The Suite?</h2>
             <p class="section-subtitle text-center">Eight comprehensive business management systems designed to cover every angle of your operation.</p>
 
-            <!-- Interactive Tabs Hub -->
-            <div class="modules-tabs-container">
-                <div class="tabs-menu">
-                    <button class="tab-btn active" onclick="switchTab(event, 'mod-crm')">
-                        <span>1. CRM & Lead Management</span>
-                        <span class="chevron">➔</span>
-                    </button>
-                    <button class="tab-btn" onclick="switchTab(event, 'mod-project')">
-                        <span>2. Project & Scheduling</span>
-                        <span class="chevron">➔</span>
-                    </button>
-                    <button class="tab-btn" onclick="switchTab(event, 'mod-analysis')">
-                        <span>3. Business Analysis</span>
-                        <span class="chevron">➔</span>
-                    </button>
-                    <button class="tab-btn" onclick="switchTab(event, 'mod-marketing')">
-                        <span>4. Campaign Marketing</span>
-                        <span class="chevron">➔</span>
-                    </button>
-                    <button class="tab-btn" onclick="switchTab(event, 'mod-financial')">
-                        <span>5. Financial Planning</span>
-                        <span class="chevron">➔</span>
-                    </button>
-                    <button class="tab-btn" onclick="switchTab(event, 'mod-acquisition')">
-                        <span>6. Business Planning</span>
-                        <span class="chevron">➔</span>
-                    </button>
-                    <button class="tab-btn" onclick="switchTab(event, 'mod-team')">
-                        <span>7. Team Management</span>
-                        <span class="chevron">➔</span>
-                    </button>
-                    <button class="tab-btn" onclick="switchTab(event, 'mod-docs')">
-                        <span>8. Extra Documents Vault</span>
-                        <span class="chevron">➔</span>
-                    </button>
+            <div class="modules-grid">
+                <!-- Module 1 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+                            </svg>
+                        </span>
+                        <h3>CRM & Lead Management</h3>
+                        <span class="module-expand">+</span>
+                    </div>
+                    <span class="module-num">01</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Manage, track, and close your potential buyers and sellers with an automated pipeline database.</p>
+                        <ul class="module-features">
+                            <li>Real Estate CRM Master Tracker</li>
+                            <li>Realtor CRM Dashboard in Excel</li>
+                            <li>Realtor Client Tracker & Log</li>
+                            <li>Realtor Client Detail Sheet</li>
+                            <li>Sold Property Archive Logs</li>
+                            <li>CRM for Warm/Cold Prospects</li>
+                            <li>Real Estate Sales Pipeline Tracker</li>
+                            <li>Realtor Daily Contact Checklist</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="tabs-content">
-                    <!-- Tab 1 -->
-                    <div id="mod-crm" class="tab-pane active">
-                        <div class="tab-text-content">
-                            <h3><span>🏠</span> CRM & Lead Management</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Manage, track, and close your potential buyers and sellers with an automated pipeline database.</p>
-                            <ul>
-                                <li>Real Estate CRM Master Tracker</li>
-                                <li>Realtor CRM Dashboard in Excel</li>
-                                <li>Realtor Client Tracker & Log</li>
-                                <li>Realtor Client Detail Sheet</li>
-                                <li>Sold Property Archive Logs</li>
-                                <li>CRM for Warm/Cold Prospects</li>
-                                <li>Real Estate Sales Pipeline Tracker</li>
-                                <li>Realtor Daily Contact Checklist</li>
-                            </ul>
-                        </div>
+                <!-- Module 2 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+                            </svg>
+                        </span>
+                        <h3>Project & Scheduling</h3>
+                        <span class="module-expand">+</span>
                     </div>
-
-                    <!-- Tab 2 -->
-                    <div id="mod-project" class="tab-pane">
-                        <div class="tab-text-content">
-                            <h3><span>📊</span> Project & Scheduling</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Monitor construction timelines, schedule client visits, and keep projects running on budget.</p>
-                            <ul>
-                                <li>Project Management Dashboard</li>
-                                <li>Project Scope & Plan Outlines</li>
-                                <li>Project Budgeting Template</li>
-                                <li>Construction Job Cost Analyzer</li>
-                                <li>Ultimate Gantt Chart Creator</li>
-                                <li>Construction Project Cash Flow</li>
-                                <li>Monthly Interaction Calendar</li>
-                                <li>Interactive Appointment Trackers</li>
-                            </ul>
-                        </div>
+                    <span class="module-num">02</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Monitor construction timelines, schedule client visits, and keep projects running on budget.</p>
+                        <ul class="module-features">
+                            <li>Project Management Dashboard</li>
+                            <li>Project Scope & Plan Outlines</li>
+                            <li>Project Budgeting Template</li>
+                            <li>Construction Job Cost Analyzer</li>
+                            <li>Ultimate Gantt Chart Creator</li>
+                            <li>Construction Project Cash Flow</li>
+                            <li>Monthly Interaction Calendar</li>
+                            <li>Interactive Appointment Trackers</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <!-- Tab 3 -->
-                    <div id="mod-analysis" class="tab-pane">
-                        <div class="tab-text-content">
-                            <h3><span>📈</span> Business Analysis</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Review your listing conversions, map out key transaction milestones, and track sales performance.</p>
-                            <ul>
-                                <li>Client Info & Database Manager</li>
-                                <li>Property Listings Master Log</li>
-                                <li>Interactive Sales Pipelines</li>
-                                <li>Excel Calendar & Task Trackers</li>
-                                <li>Transaction Coordinator Checklist</li>
-                                <li>Monthly & Annual Sales Trackers</li>
-                                <li>Lead Follow-Up Notification Sheet</li>
-                                <li>Listing Intake Agreements Tracker</li>
-                            </ul>
-                        </div>
+                <!-- Module 3 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
+                            </svg>
+                        </span>
+                        <h3>Business Analysis</h3>
+                        <span class="module-expand">+</span>
                     </div>
-
-                    <!-- Tab 4 -->
-                    <div id="mod-marketing" class="tab-pane">
-                        <div class="tab-text-content">
-                            <h3><span>📱</span> Campaign Marketing</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Plan social media strategies, outline campaign budgets, and train your agents on modern digital marketing.</p>
-                            <ul>
-                                <li>Business Development Gantt Chart</li>
-                                <li>Marketing Agency Gantt Chart</li>
-                                <li>Business Marketing Budget Template</li>
-                                <li>Social Media Content Grid</li>
-                                <li>Ultimate Leads Tracker Sheets</li>
-                                <li>Step-by-Step Business Video Guide</li>
-                                <li>Client Target Demographics Map</li>
-                                <li>Lead Gen Campaign Budget Sheets</li>
-                            </ul>
-                        </div>
+                    <span class="module-num">03</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Review your listing conversions, map out key transaction milestones, and track sales performance.</p>
+                        <ul class="module-features">
+                            <li>Client Info & Database Manager</li>
+                            <li>Property Listings Master Log</li>
+                            <li>Interactive Sales Pipelines</li>
+                            <li>Excel Calendar & Task Trackers</li>
+                            <li>Transaction Coordinator Checklist</li>
+                            <li>Monthly & Annual Sales Trackers</li>
+                            <li>Lead Follow-Up Notification Sheet</li>
+                            <li>Listing Intake Agreements Tracker</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <!-- Tab 5 -->
-                    <div id="mod-financial" class="tab-pane">
-                        <div class="tab-text-content">
-                            <h3><span>💵</span> Financial Planning</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Track profit and loss, outline running office expenses, and generate multi-year revenue projections.</p>
-                            <ul>
-                                <li>Dynamic Cash Flow Statement</li>
-                                <li>Business Budget Forecast Planner</li>
-                                <li>Dynamic Income & Expense Tracker</li>
-                                <li>Income Expense & Budget Worksheets</li>
-                                <li>6-Year Master Financial Plan</li>
-                                <li>Realtor Bookkeeping Spreadsheet</li>
-                                <li>Monthly Office Budget Templates</li>
-                                <li>Interactive Financial Dashboard</li>
-                            </ul>
-                        </div>
+                <!-- Module 4 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38a.851.851 0 01-1.17-.405 16.86 16.86 0 01-.69-1.435m0-4.249c-.256-1.066-.4-2.173-.4-3.309 0-1.136.144-2.243.4-3.309m0 6.618c.256 1.066.4 2.173.4 3.309 0 1.136-.144 2.243-.4 3.309M19.5 12h-6"/>
+                            </svg>
+                        </span>
+                        <h3>Campaign Marketing</h3>
+                        <span class="module-expand">+</span>
                     </div>
-
-                    <!-- Tab 6 -->
-                    <div id="mod-acquisition" class="tab-pane">
-                        <div class="tab-text-content">
-                            <h3><span>🎯</span> Business Planning & Acquisition</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Prepare business blueprints, map startup capital requirement tables, and organize client buyer sheets.</p>
-                            <ul>
-                                <li>Business Plan Proposal Template</li>
-                                <li>Business Acquisition Worksheets</li>
-                                <li>Startup Costs Estimation Calculator</li>
-                                <li>Weekly Task Planner Templates</li>
-                                <li>Automated Quote & Invoice Creator</li>
-                                <li>Sales Targets & KPI Calculators</li>
-                                <li>Realtor Buyers Checklist</li>
-                                <li>Excel Portfolio Management</li>
-                            </ul>
-                        </div>
+                    <span class="module-num">04</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Plan social media strategies, outline campaign budgets, and train your agents on modern digital marketing.</p>
+                        <ul class="module-features">
+                            <li>Business Development Gantt Chart</li>
+                            <li>Marketing Agency Gantt Chart</li>
+                            <li>Business Marketing Budget Template</li>
+                            <li>Social Media Content Grid</li>
+                            <li>Ultimate Leads Tracker Sheets</li>
+                            <li>Step-by-Step Business Video Guide</li>
+                            <li>Client Target Demographics Map</li>
+                            <li>Lead Gen Campaign Budget Sheets</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <!-- Tab 7 -->
-                    <div id="mod-team" class="tab-pane">
-                        <div class="tab-text-content">
-                            <h3><span>🧑‍💼</span> Team & Employee Management</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Monitor internal employee hours, track agent leaves, and streamline your recruitment pipeline.</p>
-                            <ul>
-                                <li>Employee Attendance Logs</li>
-                                <li>Employee Timesheet Calculator</li>
-                                <li>Employee Leave Tracker</li>
-                                <li>Ultimate Recruitment Pipeline</li>
-                                <li>Agent Shift Scheduling Planners</li>
-                                <li>Performance Review Checklists</li>
-                                <li>Agent Commission Trackers</li>
-                                <li>Office Operations Checksheets</li>
-                            </ul>
-                        </div>
+                <!-- Module 5 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </span>
+                        <h3>Financial Planning</h3>
+                        <span class="module-expand">+</span>
                     </div>
+                    <span class="module-num">05</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Track profit and loss, outline running office expenses, and generate multi-year revenue projections.</p>
+                        <ul class="module-features">
+                            <li>Dynamic Cash Flow Statement</li>
+                            <li>Business Budget Forecast Planner</li>
+                            <li>Dynamic Income & Expense Tracker</li>
+                            <li>Income Expense & Budget Worksheets</li>
+                            <li>6-Year Master Financial Plan</li>
+                            <li>Realtor Bookkeeping Spreadsheet</li>
+                            <li>Monthly Office Budget Templates</li>
+                            <li>Interactive Financial Dashboard</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <!-- Tab 8 -->
-                    <div id="mod-docs" class="tab-pane">
-                        <div class="tab-text-content">
-                            <h3><span>📁</span> Extra Documents Vault</h3>
-                            <p class="mb-30" style="color: var(--text-secondary);">Unlock pre-drafted legal templates, landlord-tenant agreements, and high-converting sales scripts.</p>
-                            <ul>
-                                <li>25+ Real Estate Business Agreements</li>
-                                <li>20+ Landlord-Tenant Documents</li>
-                                <li>10+ Contracting Agreement Templates</li>
-                                <li>160+ Telemarketing Phone Scripts</li>
-                                <li>310+ WhatsApp Sales Messages</li>
-                                <li>100+ Generic Business Agreements</li>
-                                <li>170+ LinkedIn Marketing Templates</li>
-                                <li>90+ Sales & Marketing Blueprints</li>
-                            </ul>
-                        </div>
+                <!-- Module 6 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l3 3m0 0l3-3m-3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"/>
+                            </svg>
+                        </span>
+                        <h3>Business Planning & Acquisition</h3>
+                        <span class="module-expand">+</span>
+                    </div>
+                    <span class="module-num">06</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Prepare business blueprints, map startup capital requirement tables, and organize client buyer sheets.</p>
+                        <ul class="module-features">
+                            <li>Business Plan Proposal Template</li>
+                            <li>Business Acquisition Worksheets</li>
+                            <li>Startup Costs Estimation Calculator</li>
+                            <li>Weekly Task Planner Templates</li>
+                            <li>Automated Quote & Invoice Creator</li>
+                            <li>Sales Targets & KPI Calculators</li>
+                            <li>Realtor Buyers Checklist</li>
+                            <li>Excel Portfolio Management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+                            </svg>
+                        </span>
+                        <h3>Team & Employee Management</h3>
+                        <span class="module-expand">+</span>
+                    </div>
+                    <span class="module-num">07</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Monitor internal employee hours, track agent leaves, and streamline your recruitment pipeline.</p>
+                        <ul class="module-features">
+                            <li>Employee Attendance Logs</li>
+                            <li>Employee Timesheet Calculator</li>
+                            <li>Employee Leave Tracker</li>
+                            <li>Ultimate Recruitment Pipeline</li>
+                            <li>Agent Shift Scheduling Planners</li>
+                            <li>Performance Review Checklists</li>
+                            <li>Agent Commission Trackers</li>
+                            <li>Office Operations Checksheets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 8 -->
+                <div class="module-card">
+                    <div class="module-card-header">
+                        <span class="module-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/>
+                            </svg>
+                        </span>
+                        <h3>Extra Documents Vault</h3>
+                        <span class="module-expand">+</span>
+                    </div>
+                    <span class="module-num">08</span>
+                    <div class="module-card-body">
+                        <p class="module-desc">Unlock pre-drafted legal templates, landlord-tenant agreements, and high-converting sales scripts.</p>
+                        <ul class="module-features">
+                            <li>25+ Real Estate Business Agreements</li>
+                            <li>20+ Landlord-Tenant Documents</li>
+                            <li>10+ Contracting Agreement Templates</li>
+                            <li>160+ Telemarketing Phone Scripts</li>
+                            <li>310+ WhatsApp Sales Messages</li>
+                            <li>100+ Generic Business Agreements</li>
+                            <li>170+ LinkedIn Marketing Templates</li>
+                            <li>90+ Sales & Marketing Blueprints</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -709,7 +743,7 @@
                                 </div>
                                 <p class="review-text">"The Real Estate Bundle is incredible! It’s helped me stay organized, save time, and deliver high-quality materials to my clients. My workflow is smoother, and my client satisfaction has skyrocketed."</p>
                                 <div class="reviewer-profile">
-                                    <div class="avatar-placeholder">SD</div>
+                                    <img src="assets/reviewer-sameer.webp" alt="Sameer Deshmukh" class="reviewer-avatar">
                                     <div class="reviewer-info">
                                         <div class="reviewer-name">Sameer Deshmukh</div>
                                         <div class="reviewer-title">Commercial Advisor</div>
@@ -725,7 +759,7 @@
                                 </div>
                                 <p class="review-text">"I can’t thank the creators enough. Every aspect of this bundle is designed to make the life of a real estate professional easier. The marketing tools have helped me attract more clients."</p>
                                 <div class="reviewer-profile">
-                                    <div class="avatar-placeholder">NG</div>
+                                    <img src="assets/reviewer-neha.webp" alt="Neha Gupta" class="reviewer-avatar">
                                     <div class="reviewer-info">
                                         <div class="reviewer-name">Neha Gupta</div>
                                         <div class="reviewer-title">Marketing Specialist</div>
@@ -741,7 +775,7 @@
                                 </div>
                                 <p class="review-text">"This bundle exceeded my expectations! The marketing tools have made my listings stand out, and the documents have streamlined my client interactions. It’s a comprehensive solution."</p>
                                 <div class="reviewer-profile">
-                                    <div class="avatar-placeholder">KN</div>
+                                    <img src="assets/reviewer-kavita.webp" alt="Kavita Nair" class="reviewer-avatar">
                                     <div class="reviewer-info">
                                         <div class="reviewer-name">Kavita Nair</div>
                                         <div class="reviewer-title">Sales Agent</div>
@@ -757,7 +791,7 @@
                                 </div>
                                 <p class="review-text">"After 10 years in the industry, I can confidently say that the Real Estate Bundle is one of the best investments I've made. The templates are easy to use, professional, and close deals faster."</p>
                                 <div class="reviewer-profile">
-                                    <div class="avatar-placeholder">RI</div>
+                                    <img src="assets/reviewer-ramesh.webp" alt="Ramesh Iyer" class="reviewer-avatar">
                                     <div class="reviewer-info">
                                         <div class="reviewer-name">Ramesh Iyer</div>
                                         <div class="reviewer-title">Builder & Developer</div>
@@ -773,7 +807,7 @@
                                 </div>
                                 <p class="review-text">"I was struggling with creating impactful marketing materials, but this bundle solved all my problems. The presentations look polished, and I've seen a noticeable boost in inquiries."</p>
                                 <div class="reviewer-profile">
-                                    <div class="avatar-placeholder">PS</div>
+                                    <img src="assets/reviewer-priya.webp" alt="Priya Sharma" class="reviewer-avatar">
                                     <div class="reviewer-info">
                                         <div class="reviewer-name">Priya Sharma</div>
                                         <div class="reviewer-title">Property Manager</div>
@@ -789,7 +823,7 @@
                                 </div>
                                 <p class="review-text">"The Real Estate Bundle has completely transformed the way I manage my business. From saving hours of work with ready-made templates to impressing clients, this bundle is a game-changer!"</p>
                                 <div class="reviewer-profile">
-                                    <div class="avatar-placeholder">AM</div>
+                                    <img src="assets/reviewer-arjun.webp" alt="Arjun Mehta" class="reviewer-avatar">
                                     <div class="reviewer-info">
                                         <div class="reviewer-name">Arjun Mehta</div>
                                         <div class="reviewer-title">Consultant</div>
@@ -1017,17 +1051,30 @@
 
         startTimer();
 
-        // Switch Module Tab Panels
-        function switchTab(e, tabId) {
-            const tabs = document.querySelectorAll('.tab-btn');
-            const panes = document.querySelectorAll('.tab-pane');
-            
-            tabs.forEach(t => t.classList.remove('active'));
-            panes.forEach(p => p.classList.remove('active'));
-            
-            e.currentTarget.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
+        // Module Cards: Desktop all open, mobile accordion
+        function initModules() {
+            const cards = document.querySelectorAll('.module-card');
+            const isMobile = window.innerWidth <= 768;
+
+            cards.forEach(c => c.classList.remove('active'));
+
+            if (isMobile) {
+                if (cards.length > 0) cards[0].classList.add('active');
+                cards.forEach(card => {
+                    card.addEventListener('click', function handler() {
+                        const wasActive = this.classList.contains('active');
+                        cards.forEach(c => c.classList.remove('active'));
+                        if (!wasActive) this.classList.add('active');
+                    });
+                });
+            }
         }
+        initModules();
+        let modulesResizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(modulesResizeTimer);
+            modulesResizeTimer = setTimeout(initModules, 200);
+        });
 
         // Collapsible FAQ Accordion Logic
         document.querySelectorAll('.faq-header').forEach(header => {
