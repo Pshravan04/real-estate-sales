@@ -1216,7 +1216,7 @@ a {
 
 .bonus-image-wrapper {
     width: 100%;
-    height: 140px;
+    height: 180px;
     margin-bottom: 20px;
     border-radius: var(--radius-md);
     background: linear-gradient(135deg, rgba(197, 155, 39, 0.06), rgba(197, 155, 39, 0.01));
@@ -1224,12 +1224,19 @@ a {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid var(--border-glass);
-    color: var(--accent-gold);
+    overflow: hidden;
 }
 
-.bonus-image-wrapper svg {
-    width: 52px;
-    height: 52px;
+.bonus-image-wrapper img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    transition: transform 0.4s ease;
+}
+
+.bonus-card:hover .bonus-image-wrapper img {
+    transform: scale(1.05);
 }
 
 .bonus-card {
@@ -1630,6 +1637,7 @@ a {
 /* FAQ Section */
 .faq-section {
     padding: 120px 0;
+    background: linear-gradient(180deg, var(--bg) 0%, rgba(212, 175, 55, 0.03) 50%, var(--bg) 100%);
 }
 
 .faq-container {
@@ -1637,16 +1645,39 @@ a {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .faq-item {
     background: var(--bg-card);
     border: 1px solid var(--border-glass);
-    border-radius: var(--radius-md);
+    border-radius: 0;
     overflow: hidden;
-    transition: var(--transition-smooth);
-    box-shadow: var(--shadow-soft);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-gold-light), var(--accent-gold));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+.faq-item.active::before,
+.faq-item:hover::before {
+    opacity: 1;
+}
+
+.faq-item.active {
+    border-color: rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 24px rgba(212, 175, 55, 0.08);
 }
 
 .faq-item:hover {
@@ -1654,52 +1685,65 @@ a {
 }
 
 .faq-header {
-    padding: 24px;
+    padding: 22px 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     user-select: none;
+    gap: 16px;
 }
 
 .faq-header h4 {
-    font-size: 1.15rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--font-body);
     margin-bottom: 0;
-    padding-right: 20px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
 }
 
 .faq-icon {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     position: relative;
     flex-shrink: 0;
+    border: 1.5px solid var(--accent-gold);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .faq-icon::before, .faq-icon::after {
     content: '';
     position: absolute;
     background-color: var(--accent-gold);
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    border-radius: 1px;
 }
 
 .faq-icon::before {
-    top: 11px;
-    left: 4px;
-    width: 16px;
-    height: 2px;
+    top: 13px;
+    left: 7px;
+    width: 12px;
+    height: 1.5px;
 }
 
 .faq-icon::after {
-    top: 4px;
-    left: 11px;
-    width: 2px;
-    height: 16px;
+    top: 7px;
+    left: 13px;
+    width: 1.5px;
+    height: 12px;
+}
+
+.faq-item.active .faq-icon {
+    background: rgba(212, 175, 55, 0.1);
+    transform: rotate(45deg);
 }
 
 .faq-item.active .faq-icon::after {
-    transform: rotate(90deg);
     opacity: 0;
+    transform: rotate(90deg);
 }
 
 .faq-item.active .faq-icon::before {
@@ -1709,20 +1753,40 @@ a {
 .faq-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
-    background: rgba(0, 0, 0, 0.005);
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-item.active .faq-content {
     max-height: 500px;
-    transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-content p {
-    padding: 0 24px 24px 24px;
+    padding: 0 28px 24px 36px;
     color: var(--text-secondary);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    position: relative;
+}
+
+.faq-content p::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.3), transparent 80%);
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.faq-cta-btn {
+    padding: 14px 36px;
+    font-size: 0.95rem;
 }
 
 /* Call to Action Final — Gold Banner with Cards */
@@ -2258,6 +2322,9 @@ footer p {
         padding: 28px 24px;
         overflow: visible;
     }
+    .bonus-image-wrapper {
+        height: 150px;
+    }
     .bonuses-section.reveal,
     .bonuses-section.reveal.active {
         opacity: 1;
@@ -2435,6 +2502,9 @@ footer p {
     }
     .bonus-card {
         padding: 22px 18px;
+    }
+    .bonus-image-wrapper {
+        height: 130px;
     }
     .step-card {
         padding: 22px 18px;
