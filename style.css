@@ -1588,6 +1588,7 @@ a {
     }
     .reviews-spotlight .section-title {
         text-align: center;
+        font-size: 2.35rem;
     }
     .reviews-spotlight .section-subtitle {
         text-align: center;
@@ -1598,6 +1599,12 @@ a {
     .spotlight-card {
         max-width: 480px;
         margin: 0 auto;
+    }
+    .slider-arrow {
+        display: none;
+    }
+    .reviews-slider-wrapper {
+        padding: 0;
     }
 }
 
@@ -2086,30 +2093,6 @@ footer p {
         font-size: 2.35rem;
     }
 
-    /* Reviews layout: stack */
-    .reviews-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .spotlight-sticky {
-        position: relative;
-        top: 0;
-    }
-    .reviews-spotlight .section-title {
-        text-align: center;
-        font-size: 2.35rem;
-    }
-    .reviews-spotlight .section-subtitle {
-        text-align: center;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .spotlight-card {
-        max-width: 480px;
-        margin: 0 auto;
-    }
-
     /* Nav */
     .nav-links {
         display: none;
@@ -2234,6 +2217,7 @@ footer p {
     /* Reviews Slider */
     .review-card {
         flex: 0 0 100%;
+        padding: 24px 20px;
     }
     .reviews-slider-wrapper {
         padding: 0;
@@ -2241,6 +2225,9 @@ footer p {
     }
     .reviews-slider-track-container {
         overflow: hidden;
+    }
+    .reviews-slider-track {
+        gap: 16px;
     }
 
     /* Bonuses */
@@ -2256,6 +2243,21 @@ footer p {
     .bonuses-section.reveal.active {
         opacity: 1;
         transform: none;
+    }
+
+    /* Reviews mobile — full width, no overflow */
+    .spotlight-card {
+        max-width: 100%;
+        padding: 24px 20px;
+    }
+    .spotlight-main {
+        gap: 16px;
+    }
+    .spotlight-score {
+        font-size: 2.5rem;
+    }
+    .reviews-content {
+        overflow: hidden;
     }
     
     /* Steps */
