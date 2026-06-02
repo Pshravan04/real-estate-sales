@@ -1189,7 +1189,8 @@
             // Calculate translate value based on active items and gap
             if (track && items.length > 0) {
                 const itemWidth = items[0].getBoundingClientRect().width;
-                const gap = 24; // from our CSS gap: 24px
+                const style = window.getComputedStyle(track);
+                const gap = parseInt(style.gap, 10) || 24;
                 const translateX = (itemWidth + gap) * currentSlideIndex;
                 track.style.transform = `translateX(-${translateX}px)`;
             }
@@ -1303,7 +1304,8 @@
             // Calculate translate value based on active items and gap
             if (reviewsTrack && reviewsItems.length > 0) {
                 const itemWidth = reviewsItems[0].getBoundingClientRect().width;
-                const gap = 24; // from our CSS gap: 24px
+                const style = window.getComputedStyle(reviewsTrack);
+                const gap = parseInt(style.gap, 10) || 24;
                 const translateX = (itemWidth + gap) * currentReviewsIndex;
                 reviewsTrack.style.transform = `translateX(-${translateX}px)`;
             }
