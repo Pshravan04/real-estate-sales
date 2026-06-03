@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <nav class="navbar" style="border-bottom: none; background: transparent;">
         <div class="container text-center">
-            <a href="index.html" class="logo">GrowthSuite<span style="color: var(--accent-gold);">.</span></a>
+            <a href="index.html" class="logo"> <img src=""> </a>
         </div>
     </nav>
 
@@ -40,9 +40,48 @@
                     <span>Limited Time Discount (96% Off)</span>
                     <span style="color: #EF4444;">-₹4,803</span>
                 </div>
-                <div class="order-row" style="border-top: 1px solid var(--border-glass); padding-top: 18px; margin-top: 12px; font-size: 1.15rem;">
+
+                <!-- Addon Product 1 (Business Directory) -->
+                <div class="order-addon">
+                    <div class="addon-badge">Highly Recommended</div>
+                    <div class="addon-content-wrapper">
+                        <label class="addon-checkbox">
+                            <input type="checkbox" id="addon-directory" onchange="updateCart()" checked>
+                            <span class="addon-label">
+                                <strong>Yes! Add All India Business Directory (PAN INDIA) 2026</strong>
+                                <span class="addon-desc">All India Latest Database - 2025 (PAN INDIA DATABASE) Sale is Now Live Grab it. (Generate High-Quality Leads)</span>
+                            </span>
+                        </label>
+                        <div class="addon-pricing-block">
+                            <span class="old-price">₹1,999</span>
+                            <span class="current-price">₹197</span>
+                            <span class="save-label">Save 90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Addon Product 2 (Ultimate Marketing Kit) -->
+                <div class="order-addon">
+                    <div class="addon-badge">One-Time Offer</div>
+                    <div class="addon-content-wrapper">
+                        <label class="addon-checkbox">
+                            <input type="checkbox" id="addon-marketing" onchange="updateCart()" checked>
+                            <span class="addon-label">
+                                <strong>Yes! Add Ultimate Marketing Kit - Complete Bundle</strong>
+                                <span class="addon-desc">Generate more leads, boost sales, and build a powerful brand with Ultimate Marketing Kit.</span>
+                            </span>
+                        </label>
+                        <div class="addon-pricing-block">
+                            <span class="old-price">₹499</span>
+                            <span class="current-price">₹149</span>
+                            <span class="save-label">Save 70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-row" style="border-top: 1px solid var(--border-glass); padding-top: 18px; margin-top: 8px; font-size: 1.15rem;">
                     <strong>Total Today</strong>
-                    <strong style="color: var(--text-gold); font-family: var(--font-heading); font-size: 1.35rem;">₹196</strong>
+                    <strong id="cart-total" style="color: var(--text-gold); font-family: 'Outfit', sans-serif; font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em;">₹542</strong>
                 </div>
             </div>
 
@@ -58,7 +97,9 @@
                 </div>
                 
                 <div class="text-center" style="margin-top: 36px;">
-                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 20px; font-size: 1.1rem; border-radius: var(--radius-md);">Complete Purchase - ₹196</button>
+                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 20px; font-size: 1.1rem; border-radius: var(--radius-md);" id="checkout-btn">Complete Purchase - ₹542</button>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Instant Download • One-Time Payment • Lifetime Access</div>
+                    <img src="assets/razorpay-secure.png" alt="Secured by Razorpay" class="razorpay-badge" style="margin: 8px auto 0; display: block;">
                 </div>
             </form>
             
@@ -84,5 +125,15 @@
         </div>
     </div>
 
+    <script>
+        function updateCart() {
+            const base = 196;
+            const dirPrice = document.getElementById('addon-directory').checked ? 197 : 0;
+            const mktPrice = document.getElementById('addon-marketing').checked ? 149 : 0;
+            const total = base + dirPrice + mktPrice;
+            document.getElementById('cart-total').textContent = '₹' + total;
+            document.getElementById('checkout-btn').textContent = 'Complete Purchase - ₹' + total;
+        }
+    </script>
 </body>
 </html>
