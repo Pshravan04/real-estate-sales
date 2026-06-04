@@ -454,12 +454,12 @@ a {
 
 .hero-price-tag .old-price {
     text-decoration: line-through;
-    color: var(--text-muted);
+    color: #EF4444;
     font-size: 1.1rem;
 }
 
 .badge-discount {
-    background: var(--accent-gold-gradient);
+    background: linear-gradient(135deg, #DC2626, #EF4444);
     color: #FFF;
     font-size: 0.8rem;
     font-weight: 700;
@@ -856,7 +856,7 @@ a {
 .hero-highlights svg {
     width: 18px;
     height: 18px;
-    color: var(--accent-gold);
+    color: #059669;
     flex-shrink: 0;
 }
 
@@ -1286,9 +1286,9 @@ a {
     position: static;
     display: inline-block;
     margin-bottom: 12px;
-    background: rgba(197, 155, 39, 0.08);
-    border: 1px solid var(--border-glass);
-    color: var(--text-gold);
+    background: rgba(5, 150, 105, 0.08);
+    border: 1px solid rgba(5, 150, 105, 0.2);
+    color: #059669;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 4px 10px;
@@ -1340,7 +1340,7 @@ a {
 
 .bonus-features li::before {
     content: '✓';
-    color: var(--accent-gold);
+    color: #059669;
     font-weight: 700;
 }
 
@@ -2003,7 +2003,7 @@ footer p {
 .addon-pricing-block .old-price {
     font-size: 0.85rem;
     text-decoration: line-through;
-    color: var(--text-muted);
+    color: #EF4444;
 }
 
 .addon-pricing-block .current-price {
@@ -2601,7 +2601,7 @@ footer p {
 }
 
 .sticky-pre {
-    color: var(--text-gold);
+    color: #DC2626;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2625,7 +2625,7 @@ footer p {
     display: none;
     font-size: 0.65rem;
     font-weight: 800;
-    color: var(--accent-gold);
+    color: #DC2626;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     white-space: nowrap;
@@ -2670,7 +2670,7 @@ footer p {
 
 .sticky-price-tag .old-price {
     text-decoration: line-through;
-    color: var(--text-muted);
+    color: #EF4444;
     font-size: 0.9rem;
 }
 
