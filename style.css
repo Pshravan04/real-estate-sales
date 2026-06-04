@@ -2438,6 +2438,10 @@ footer p {
     .sticky-timer-container {
         gap: 4px;
     }
+    .sticky-timer-label {
+        display: inline;
+        font-size: 0.55rem;
+    }
     .sticky-timer-block {
         padding: 4px 6px;
         font-size: 0.8rem;
@@ -2617,6 +2621,17 @@ footer p {
     gap: 8px;
 }
 
+.sticky-timer-label {
+    display: none;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    line-height: 1;
+}
+
 .sticky-timer-block {
     background: var(--bg-card);
     border: 1px solid var(--border-glass);
@@ -2685,6 +2700,10 @@ footer p {
     }
     .sticky-timer-container {
         gap: 4px;
+    }
+    .sticky-timer-label {
+        display: inline;
+        font-size: 0.55rem;
     }
     .sticky-timer-block {
         padding: 4px 6px;
