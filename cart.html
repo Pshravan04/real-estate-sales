@@ -28,6 +28,13 @@
 
             <div class="order-summary">
                 <h3>Order Summary</h3>
+                <div class="order-product-image">
+                    <img src="assets/hero_page_books_image.png" alt="Ultimate Real Estate Business Bundle">
+                    <div class="order-product-details">
+                        <strong>Ultimate Real Estate GrowthSuite</strong>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">3-in-1 Business Bundle</span>
+                    </div>
+                </div>
                 <div class="order-row">
                     <span>Ultimate Real Estate Business Bundle</span>
                     <span style="text-decoration: line-through; color: #EF4444;">₹4,999</span>
@@ -46,7 +53,7 @@
                     <div class="addon-badge">Highly Recommended</div>
                     <div class="addon-content-wrapper">
                         <label class="addon-checkbox">
-                            <input type="checkbox" id="addon-directory" onchange="updateCart()" checked>
+                            <input type="checkbox" id="addon-directory" onchange="updateCart()">
                             <span class="addon-label">
                                 <strong>Yes! Add All India Business Directory (PAN INDIA) 2026</strong>
                                 <span class="addon-desc">All India Latest Database - 2025 (PAN INDIA DATABASE) Sale is Now Live Grab it. (Generate High-Quality Leads)</span>
@@ -65,7 +72,7 @@
                     <div class="addon-badge">One-Time Offer</div>
                     <div class="addon-content-wrapper">
                         <label class="addon-checkbox">
-                            <input type="checkbox" id="addon-marketing" onchange="updateCart()" checked>
+                            <input type="checkbox" id="addon-marketing" onchange="updateCart()">
                             <span class="addon-label">
                                 <strong>Yes! Add Ultimate Marketing Kit - Complete Bundle</strong>
                                 <span class="addon-desc">Generate more leads, boost sales, and build a powerful brand with Ultimate Marketing Kit.</span>
@@ -81,7 +88,7 @@
 
                 <div class="order-row" style="border-top: 1px solid var(--border-glass); padding-top: 18px; margin-top: 8px; font-size: 1.15rem;">
                     <strong>Total Today</strong>
-                    <strong id="cart-total" style="color: var(--text-gold); font-family: 'Outfit', sans-serif; font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em;">₹542</strong>
+                    <strong id="cart-total" style="color: #DC2626; font-family: 'Outfit', sans-serif; font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em;">₹196</strong>
                 </div>
             </div>
 
@@ -97,7 +104,7 @@
                 </div>
                 
                 <div class="text-center" style="margin-top: 36px;">
-                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 20px; font-size: 1.1rem; border-radius: var(--radius-md);" id="checkout-btn">Complete Purchase - ₹542</button>
+                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 20px; font-size: 1.1rem; border-radius: var(--radius-md);" id="checkout-btn">Complete Purchase - ₹196</button>
                     <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Instant Download • One-Time Payment • Lifetime Access</div>
                     <img src="assets/razorpay-secure.png" alt="Secured by Razorpay" class="razorpay-badge" style="margin: 8px auto 0; display: block;">
                 </div>
@@ -120,7 +127,7 @@
             </div>
             
             <p class="text-center" style="margin-top: 24px; font-size: 0.75rem; color: var(--text-muted); line-height: 1.5;">
-                By clicking "Complete Purchase", you agree to our <a href="#" style="text-decoration: underline;">Terms of Service</a> and <a href="#" style="text-decoration: underline;">Privacy Policy</a>.
+                By clicking "Complete Purchase", you agree to our <a href="terms.html" style="text-decoration: underline;">Terms of Service</a> and <a href="privacy.html" style="text-decoration: underline;">Privacy Policy</a>.
             </p>
         </div>
     </div>
@@ -134,6 +141,7 @@
             document.getElementById('cart-total').textContent = '₹' + total;
             document.getElementById('checkout-btn').textContent = 'Complete Purchase - ₹' + total;
         }
+        updateCart();
     </script>
 </body>
 </html>

@@ -52,7 +52,7 @@
                     <span class="badge-text">Rated <span class="num">4.62</span>/<span class="num">5</span> by Industry Pros</span>
                 </div>
                 
-                <h1 class="hero-main-title">Close More Deals. Track Every Lead. <span class="text-gold heading-italic">Scale Your Real Estate Business</span>Without the Chaos.</h1>
+                <h1 class="hero-main-title">Close More Deals. Track Every Lead. <span class="text-gold heading-italic" style="text-decoration: underline; text-underline-offset: 6px;">Scale Your Real Estate Business</span>Without the Chaos.</h1>
                 <p class="hero-desc">The Ultimate Real Estate Business Management Toolkit trusted by agents, brokers and teams to manage leads, sales, commissions, follow-ups and business growth from one place.</p>
                 
                 <!-- Quick Highlights -->
@@ -486,7 +486,7 @@
     <!-- Bonuses Section -->
     <section id="bonuses" class="bonuses-section reveal">
         <div class="container">
-            <h2 class="section-title text-center">Exclusive Premium Bonuses Worth Rs 75000/-</h2>
+            <h2 class="section-title text-center">Exclusive Premium Bonuses <span style="text-decoration: underline; text-underline-offset: 6px; text-decoration-color: #059669;">Worth Rs 75000/-</span></h2>
             <p class="section-subtitle text-center">Unlock an extra ₹<span class="num">75,000</span> in value, absolutely <span style="color: #059669; font-weight: 700;">FREE</span> with your purchase today.</p>
 
             <div class="bonus-grid">
@@ -885,11 +885,15 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="refund.html">Refund Policy</a>
                 <a href="#">Contact Us</a>
             </div>
-            <p>&copy; 2026 GrowthSuite. All rights reserved.</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">
+                &copy; 2026 GrowthSuite. All rights reserved.<br>
+                This site is not affiliated with Facebook&trade;, OpenAI, or Gemini Pro. All trademarks are property of their respective owners.
+            </p>
         </div>
     </footer>
 
@@ -901,18 +905,10 @@
                 <span class="sticky-title">Growth Suite 3-in-1</span>
             </div>
             
-            <!-- Sticky Timer -->
-            <div class="sticky-timer-container">
-                <span class="sticky-timer-label">Hurry Up!</span>
-                <div class="sticky-timer-block">
-                    <span id="sticky-hours"><span class="num">02</span></span>h
-                </div>
-                <div class="sticky-timer-block">
-                    <span id="sticky-minutes"><span class="num">14</span></span>m
-                </div>
-                <div class="sticky-timer-block">
-                    <span id="sticky-seconds"><span class="num">30</span></span>s
-                </div>
+            <!-- Live Buying Counter -->
+            <div class="sticky-counter">
+                <span class="sticky-counter-icon">&#128100;</span>
+                <span class="sticky-counter-text"><span class="num" id="live-buyers">127</span> users are buying this</span>
             </div>
             
             <!-- Sticky Price & Action -->
@@ -1057,19 +1053,15 @@
             });
         });
 
-        // Timer
-        let totalSeconds = 2 * 3600 + 14 * 60 + 30;
-        function updateTimer() {
-            const h = Math.floor(totalSeconds / 3600);
-            const m = Math.floor((totalSeconds % 3600) / 60);
-            const s = totalSeconds % 60;
-            document.querySelectorAll('#sticky-hours, [id^="hours-"]').forEach(el => { if(el) el.textContent = String(h).padStart(2, '0'); });
-            document.querySelectorAll('#sticky-minutes, [id^="minutes-"]').forEach(el => { if(el) el.textContent = String(m).padStart(2, '0'); });
-            document.querySelectorAll('#sticky-seconds, [id^="seconds-"]').forEach(el => { if(el) el.textContent = String(s).padStart(2, '0'); });
-            if (totalSeconds > 0) totalSeconds--;
+        // Live Buying Counter
+        let liveBuyers = 127;
+        function updateLiveCounter() {
+            const el = document.getElementById('live-buyers');
+            if (el) el.textContent = liveBuyers;
+            liveBuyers += Math.floor(Math.random() * 2);
         }
-        updateTimer();
-        setInterval(updateTimer, 1000);
+        updateLiveCounter();
+        setInterval(updateLiveCounter, 1000);
     </script>
 </body>
 </html>
