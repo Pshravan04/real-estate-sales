@@ -1222,13 +1222,6 @@ a {
         flex: 0 0 100%; /* 1 card at a time on mobile */
     }
     
-    /* Reviews Slider Responsiveness */
-    .review-card {
-        flex: 0 0 100%; /* 1 item per view on mobile */
-    }
-    .reviews-slider-wrapper {
-        padding: 0;
-    }
 }
 
 /* Bonuses Section */
@@ -1494,144 +1487,10 @@ a {
     width: 100%;
 }
 
-.reviews-slider-wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 40px; /* Space for absolute navigation arrows */
-}
 
-.reviews-slider-track-container {
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0; /* Prevents card shadow clipping */
-}
-
-.reviews-slider-track {
-    display: flex;
-    gap: 24px;
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
-}
-
-.review-card {
-    flex: 0 0 calc(50% - 12px); /* 2 items per view on desktop */
-    background: var(--bg-card);
-    border: 1px solid var(--border-glass);
-    border-radius: var(--radius-lg);
-    padding: 36px 30px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition-smooth);
-    overflow: hidden;
-}
-
-.review-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent-gold-light);
-}
-
-.card-quote-bg {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    font-size: 8rem;
-    font-family: var(--font-heading);
-    color: rgba(197, 155, 39, 0.04);
-    line-height: 1;
-    pointer-events: none;
-    user-select: none;
-    font-weight: 800;
-}
-
-.review-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.review-card-header .stars {
-    margin-bottom: 0;
-}
-
-.verified-buyer-tag {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--text-gold);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background: rgba(197, 155, 39, 0.06);
-    padding: 3px 8px;
-    border-radius: 4px;
-    border: 1px solid rgba(197, 155, 39, 0.15);
-}
-
-.review-card p.review-text {
-    font-style: normal;
-    color: var(--text-secondary);
-    line-height: 1.65;
-    margin-bottom: 24px;
-    font-size: 0.925rem;
-    z-index: 1;
-}
-
-.reviewer-profile {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    padding-top: 16px;
-}
-
-.avatar-placeholder {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 1px solid var(--accent-gold-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text-gold);
-    background: linear-gradient(135deg, rgba(197, 155, 39, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
-    flex-shrink: 0;
-}
-
-.reviewer-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid var(--accent-gold);
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.reviewer-name {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text-primary);
-    margin-bottom: 2px;
-}
-
-.reviewer-title {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
 
 .whatsapp-gallery {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .whatsapp-gallery-title {
@@ -1707,9 +1566,6 @@ a {
     }
     .slider-arrow {
         display: none;
-    }
-    .reviews-slider-wrapper {
-        padding: 0;
     }
 }
 
@@ -2494,22 +2350,6 @@ footer p {
         flex: 0 0 100%;
     }
 
-    /* Reviews Slider */
-    .review-card {
-        flex: 0 0 100%;
-        padding: 24px 20px;
-    }
-    .reviews-slider-wrapper {
-        padding: 0;
-        max-width: 100%;
-    }
-    .reviews-slider-track-container {
-        overflow: hidden;
-    }
-    .reviews-slider-track {
-        gap: 16px;
-    }
-
     /* Bonuses */
     .bonus-grid {
         grid-template-columns: 1fr;
@@ -2648,9 +2488,6 @@ footer p {
     }
     .reviews-section {
         padding: 50px 0;
-    }
-    .review-card {
-        padding: 24px 20px;
     }
     .timer-value {
         font-size: 1.75rem;
