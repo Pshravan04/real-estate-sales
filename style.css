@@ -2480,6 +2480,33 @@ footer p {
         font-size: 0.7rem;
         white-space: nowrap;
     }
+
+    /* Checkout page mobile product layout */
+    .addon-content-wrapper {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .addon-pricing-block {
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 34px;
+        margin-top: 2px;
+    }
+    .addon-pricing-block .current-price {
+        font-size: 1.05rem;
+    }
+    .addon-pricing-block .old-price {
+        font-size: 0.75rem;
+    }
+    .addon-label strong {
+        font-size: 0.85rem;
+    }
+    .addon-desc {
+        font-size: 0.72rem;
+    }
 }
 
 /* Small Mobile (600px) */
