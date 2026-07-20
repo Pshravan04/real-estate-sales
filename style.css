@@ -2482,30 +2482,36 @@ footer p {
     }
 
     /* Checkout page mobile product layout */
+    .order-addon {
+        padding: 24px 20px;
+    }
     .addon-content-wrapper {
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 12px;
     }
     .addon-pricing-block {
         flex-direction: row;
-        gap: 8px;
+        gap: 14px;
         align-items: center;
         width: 100%;
         justify-content: flex-start;
         padding-left: 34px;
-        margin-top: 2px;
+        margin-top: 4px;
     }
     .addon-pricing-block .current-price {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
     }
     .addon-pricing-block .old-price {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+    }
+    .addon-pricing-block .save-label {
+        font-size: 0.7rem;
     }
     .addon-label strong {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
     .addon-desc {
-        font-size: 0.72rem;
+        font-size: 0.78rem;
     }
 }
 
