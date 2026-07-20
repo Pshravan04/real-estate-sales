@@ -210,12 +210,6 @@ a {
     100% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0); }
 }
 
-@keyframes pulse-red-dot {
-    0% { transform: scale(0.95); opacity: 0.6; }
-    50% { transform: scale(1.15); opacity: 1; }
-    100% { transform: scale(0.95); opacity: 0.6; }
-}
-
 /* Scroll Animation classes (manipulated by JS) */
 .reveal {
     opacity: 0;
@@ -254,6 +248,11 @@ a {
     animation: pulse-red-dot 1.5s infinite ease-in-out;
 }
 
+@keyframes pulse-red-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
 .top-bar-text {
     display: flex;
     align-items: center;
@@ -265,11 +264,6 @@ a {
 
 .marquee-content[aria-hidden="true"] {
     display: none;
-}
-
-@keyframes pulse-red-dot {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
 }
 
 /* Navigation */
@@ -2100,22 +2094,6 @@ footer p {
 }
 
 .security-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    font-weight: 600;
-}
-
-.security-badge svg {
-    width: 16px;
-    height: 16px;
-    color: #059669;
-    flex-shrink: 0;
-}
-
-.security-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -2128,6 +2106,7 @@ footer p {
     width: 16px;
     height: 16px;
     fill: var(--accent-gold);
+    flex-shrink: 0;
 }
 
 /* Thank You Page (thankyou.html) Specifics */

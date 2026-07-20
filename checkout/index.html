@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout | Luxury Edition</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body style="background-image: radial-gradient(circle at center, rgba(212, 175, 55, 0.04) 0%, transparent 70%); min-height: 100vh; display: flex; flex-direction: column;">
+
+    <div class="top-bar">
+        <span class="top-bar-dot"></span>
+        SECURE 256-BIT ENCRYPTION CHECKOUT GUARANTEED
+    </div>
+
+    <nav class="navbar" style="border-bottom: none; background: transparent;">
+        <div class="container text-center">
+            <a href="../index.html" class="logo">GrowthSuite<span style="color: var(--accent-gold);">.</span></a>
+        </div>
+    </nav>
+
+    <div class="container" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 24px;">
+        <div class="checkout-box" style="margin: 0 auto; width: 100%;">
+            <h2 class="text-center" style="font-size: 2.25rem; font-weight: 800; margin-bottom: 8px;">Complete Your Order</h2>
+            <p class="text-center" style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 40px;">Select your products below. Main bundle is required.</p>
+
+            <div class="order-summary">
+                <h3>Select Your Products</h3>
+
+                <div class="order-product-image">
+                    <img src="../assets/hero_page_books_image.png" alt="Ultimate Real Estate Business Bundle">
+                    <div class="order-product-details">
+                        <strong>Ultimate Real Estate GrowthSuite</strong>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">3-in-1 Business Bundle (Required)</span>
+                    </div>
+                </div>
+
+                <!-- Main Product (always selected) -->
+                <div class="order-addon" style="border-style: solid; border-color: var(--accent-gold); background: linear-gradient(135deg, rgba(197, 155, 39, 0.08) 0%, rgba(255, 255, 255, 1) 100%);">
+                    <div class="addon-badge" style="background: #059669;">Required</div>
+                    <div class="addon-content-wrapper">
+                        <label class="addon-checkbox">
+                            <input type="checkbox" id="product-growthsuite" checked disabled>
+                            <span class="addon-label">
+                                <strong>Ultimate Real Estate GrowthSuite</strong>
+                                <span class="addon-desc">Complete business management toolkit — CRM, trackers, contracts, templates, and more.</span>
+                            </span>
+                        </label>
+                        <div class="addon-pricing-block">
+                            <span class="old-price">₹4,999</span>
+                            <span class="current-price">₹196</span>
+                            <span class="save-label">96% Off</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Addon: Business Directory -->
+                <div class="order-addon" id="addon-card-directory">
+                    <div class="addon-badge">Highly Recommended</div>
+                    <div class="addon-content-wrapper">
+                        <label class="addon-checkbox">
+                            <input type="checkbox" id="product-directory" onchange="updateCheckout()">
+                            <span class="addon-label">
+                                <strong>Yes! Add All India Business Directory (PAN INDIA) 2026</strong>
+                                <span class="addon-desc">All India Latest Database - 2025 (PAN INDIA DATABASE) Sale is Now Live Grab it. (Generate High-Quality Leads)</span>
+                            </span>
+                        </label>
+                        <div class="addon-pricing-block">
+                            <span class="old-price">₹1,999</span>
+                            <span class="current-price">₹197</span>
+                            <span class="save-label">Save 90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Addon: Marketing Kit -->
+                <div class="order-addon" id="addon-card-marketing">
+                    <div class="addon-badge">One-Time Offer</div>
+                    <div class="addon-content-wrapper">
+                        <label class="addon-checkbox">
+                            <input type="checkbox" id="product-marketing" onchange="updateCheckout()">
+                            <span class="addon-label">
+                                <strong>Yes! Add Ultimate Marketing Kit - Complete Bundle</strong>
+                                <span class="addon-desc">Generate more leads, boost sales, and build a powerful brand with Ultimate Marketing Kit.</span>
+                            </span>
+                        </label>
+                        <div class="addon-pricing-block">
+                            <span class="old-price">₹499</span>
+                            <span class="current-price">₹149</span>
+                            <span class="save-label">Save 70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-row" style="border-top: 1px solid var(--border-glass); padding-top: 18px; margin-top: 8px; font-size: 1.15rem;">
+                    <strong>Total Today</strong>
+                    <strong id="cart-total" style="color: #DC2626; font-family: 'Outfit', sans-serif; font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em;">₹196</strong>
+                </div>
+            </div>
+
+            <h3>Your Details</h3>
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Sameer Deshmukh" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address (For Instant Delivery)</label>
+                <input type="email" id="email" placeholder="sameer@example.com" required>
+            </div>
+
+            <div class="text-center" style="margin-top: 36px;">
+                <button type="button" class="btn btn-gold" style="width: 100%; padding: 20px; font-size: 1.1rem; border-radius: var(--radius-md);" id="checkout-btn" onclick="processOrder()">Complete Purchase - ₹196</button>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Instant Download • One-Time Payment • Lifetime Access</div>
+                <img src="../assets/images/badges/razorpay-secure.png" alt="Secured by Razorpay" class="razorpay-badge" style="margin: 8px auto 0; display: block;">
+            </div>
+
+            <div class="security-badge-container">
+                <div class="security-badge">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                    <span>256-Bit SSL Encryption</span>
+                </div>
+                <div class="security-badge">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <span>Instant Delivery</span>
+                </div>
+            </div>
+
+            <p class="text-center" style="margin-top: 24px; font-size: 0.75rem; color: var(--text-muted); line-height: 1.5;">
+                By clicking "Complete Purchase", you agree to our <a href="../legal/terms.html" style="text-decoration: underline;">Terms of Service</a> and <a href="../legal/privacy.html" style="text-decoration: underline;">Privacy Policy</a>.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const PRODUCTS = {
+            growthsuite: { name: 'Ultimate Real Estate GrowthSuite', price: 196 },
+            directory: { name: 'All India Business Directory (PAN INDIA) 2026', price: 197 },
+            'marketing-kit': { name: 'Ultimate Marketing Kit - Complete Bundle', price: 149 }
+        };
+
+        const RAZORPAY_LINKS = {
+            'growthsuite': 'https://rzp.io/rzp/5PjRPTTP',
+            'growthsuite,directory': 'https://rzp.io/rzp/doyCWVe3',
+            'growthsuite,marketing-kit': 'https://rzp.io/rzp/RKx7bhz',
+            'growthsuite,directory,marketing-kit': 'https://rzp.io/rzp/Id45dau'
+        };
+
+        function getSelectedProducts() {
+            const selected = ['growthsuite'];
+            if (document.getElementById('product-directory').checked) selected.push('directory');
+            if (document.getElementById('product-marketing').checked) selected.push('marketing-kit');
+            return selected;
+        }
+
+        function getTotal(products) {
+            return products.reduce((sum, id) => sum + PRODUCTS[id].price, 0);
+        }
+
+        function updateCheckout() {
+            const selected = getSelectedProducts();
+            const total = getTotal(selected);
+            document.getElementById('cart-total').textContent = '\u20B9' + total;
+            document.getElementById('checkout-btn').textContent = 'Complete Purchase - \u20B9' + total;
+
+            document.getElementById('addon-card-directory').style.borderStyle =
+                document.getElementById('product-directory').checked ? 'solid' : 'dashed';
+            document.getElementById('addon-card-marketing').style.borderStyle =
+                document.getElementById('product-marketing').checked ? 'solid' : 'dashed';
+        }
+
+        function processOrder() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            if (!name) { alert('Please enter your full name.'); return; }
+            if (!email) { alert('Please enter your email address.'); return; }
+            if (!email.includes('@') || !email.includes('.')) { alert('Please enter a valid email address.'); return; }
+
+            const selected = getSelectedProducts();
+            const total = getTotal(selected);
+            const comboKey = selected.join(',');
+
+            localStorage.setItem('gs_order_products', comboKey);
+            localStorage.setItem('gs_order_total', total);
+            localStorage.setItem('gs_order_name', name);
+            localStorage.setItem('gs_order_email', email);
+
+            const rzpLink = RAZORPAY_LINKS[comboKey];
+            if (rzpLink) {
+                window.location.href = rzpLink;
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        }
+
+        updateCheckout();
+    </script>
+</body>
+</html>
