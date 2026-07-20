@@ -60,30 +60,76 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
+        emailjs.init('MlGTESDgVHb4nBg-2');
+
         const PRODUCTS = {
             'growthsuite': {
                 name: 'Ultimate Real Estate GrowthSuite',
                 price: 196,
                 desc: 'CRM, trackers, contracts, templates & more',
                 driveLink: 'https://drive.google.com/PLACEHOLDER_GROWTHSUITE_REPLACE_LATER',
-                icon: '&#x1F4E6;'
+                icon: '\u{1F4E6}'
             },
             'directory': {
                 name: 'All India Business Directory (PAN INDIA) 2026',
                 price: 197,
                 desc: 'Latest PAN India business database for lead generation',
                 driveLink: 'https://drive.google.com/PLACEHOLDER_DIRECTORY_REPLACE_LATER',
-                icon: '&#x1F4C1;'
+                icon: '\u{1F4C1}'
             },
             'marketing-kit': {
                 name: 'Ultimate Marketing Kit - Complete Bundle',
                 price: 149,
                 desc: 'Marketing templates, social media content & branding resources',
                 driveLink: 'https://drive.google.com/PLACEHOLDER_MARKETING_KIT_REPLACE_LATER',
-                icon: '&#x1F3A8;'
+                icon: '\u{1F3A8}'
             }
         };
+
+        function generateOrderId() {
+            const num = String(Math.floor(1000 + Math.random() * 9000));
+            return 'GS-' + num;
+        }
+
+        function getOrderData(products, total) {
+            const subtotal = products.reduce((sum, id) => {
+                const origPrices = { growthsuite: 4999, directory: 1999, 'marketing-kit': 499 };
+                return sum + (origPrices[id] || PRODUCTS[id].price);
+            }, 0);
+            return {
+                orders: products.map(id => ({
+                    name: PRODUCTS[id].name,
+                    units: 1,
+                    price: String(PRODUCTS[id].price)
+                })),
+                cost: {
+                    subtotal: String(subtotal),
+                    discount: String(subtotal - total),
+                    total: String(total)
+                },
+                download_links: products.map(id => ({
+                    icon: PRODUCTS[id].icon,
+                    url: PRODUCTS[id].driveLink,
+                    name: PRODUCTS[id].name
+                }))
+            };
+        }
+
+        function sendInvoice(name, email, orderId, products, total) {
+            const data = getOrderData(products, total);
+            const templateParams = {
+                email: email,
+                order_id: orderId,
+                orders: data.orders,
+                cost: data.cost,
+                download_links: data.download_links
+            };
+            emailjs.send('service_0v34r4l', 'template_im3kwnp', templateParams)
+                .then(() => {})
+                .catch(() => {});
+        }
 
         function getParams() {
             const params = new URLSearchParams(window.location.search);
@@ -145,6 +191,11 @@
                 `;
                 container.appendChild(div);
             });
+
+            if (email) {
+                const orderId = generateOrderId();
+                sendInvoice(name, email, orderId, products, total);
+            }
         }
 
         renderThankYou();
