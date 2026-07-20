@@ -1888,7 +1888,7 @@ footer p {
 
 .order-summary {
     background: rgba(197, 155, 39, 0.02);
-    padding: 30px;
+    padding: 10px;
     margin-bottom: 40px;
     border: 1px solid var(--border-glass);
     border-radius: var(--radius-md);
